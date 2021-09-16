@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google sign in</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta name="google-signin-client_id" content="178516143508-8din2g44fbckbukojj7ipl38uojm5nda.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="auth.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+        .g-signin2{
+            margin-left:500px;
+            margin-top:200px;
+        }
+        .data{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div class="data">
+        <!-- <p>Profile Details</p> -->
+        <img id="pic" class="img-circle" width="50" height="50"/>
+        <p>Email Address</p>
+        <p id="email" class="alert alert-succes"></p>
+        <button onclick="signOut()" class="btn btn-danger">SignOut</button>
+    </div>
+</body>
+</html>
